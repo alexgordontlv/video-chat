@@ -15,5 +15,6 @@ const addVideoStream = (video, stream) => {
   });
   const videoGrid = document.getElementById("videoId");
   videoGrid.append(video);
+  socket.emit("join-room");
 };
 askForVideoPremmision();

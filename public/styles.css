@@ -14,11 +14,12 @@
 .main_container {
   background: white;
   min-height: 80vh;
+  max-width: 50vw;
   width: 70%;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
   );
   border-radius: 2rem;
   z-index: 2;
@@ -36,7 +37,8 @@
   right: -10vw;
   background: white;
   min-height: 70vh;
-  width: 30vw;
+  width: 25vw;
+  max-width: 400px;
   background: linear-gradient(
     to right bottom,
     rgba(121, 160, 179, 0.7),
@@ -57,11 +59,12 @@
   height: 100%;
   flex: 0.7;
   display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 video {
   width: 40vw;
-  margin-left: 5vw;
+  max-width: 400px;
   border: 1px solid black;
   margin-bottom: 1px;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
