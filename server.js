@@ -9,7 +9,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  console.log("hi ");
   res.redirect(`/${uuidv4()}`);
 });
 
@@ -18,8 +17,9 @@ app.get("/:roomId", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  socket.on("join-room", () => {
-    console.log("welcome to the room");
+  socket.on("join-room", (roomId) => {
+    socket.join(roomId);
+    socket.to(roomId).broadcast.emit("user-connected");
   });
 });
 
